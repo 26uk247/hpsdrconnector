@@ -1,35 +1,25 @@
+# Credit/Fork
+Forked by 26uk247 to add selectable 2 receive port capability for the TRX-DUO running Pavel Demin's red-pitaya-notes firmware.
+Credit to https://github.com/jancona for the original code
+
 # hpsdrconnector
 An OpenWebRX connector for HPSDR radios
 
 ## Installation
 
-The HPSDR connector is packaged with OpenWebRX, so a separate installation isn't usually needed. For a manually installed OpenWebRX, see the [Manual Installation](https://github.com/jancona/hpsdrconnector#manual-installation) section below.
+The HPSDR connector is packaged with OpenWebRX, so a separate installation isn't usually needed. For a manually installed OpenWebRX, see the [Manual Installation](https://github.com/26uk247/hpsdrconnector#manual-installation) section below.
 
 ## Usage
 Navigate to the OpenWebRX settings area, "SDR devices and profiles". Click "Add new device" and select the device type "HPSDR devices (Hermes / Hermes Lite 2 / Red Pitaya)" from the dropdown. Give it a name and click the "Apply and save" button.
 
 Then create one or more profiles for the device. Be sure to specify a sample rate supported by the HPSDR device, i.e. one of 48000, 96000, 192000 or 384000.
 
-The version of the connector installed with OpenWebRX 1.0 and 1.1 only supports a single receiver. The current version supports multiple receivers, up to the number the hardware is capable of, e.g. 4 for a Hermes-Lite 2 with standard gateware. Until this version is packaged in an OpenWebRX release, you can experiment with it by using the OpenWebRX experimental repositories or by following the [manual installation](https://github.com/jancona/hpsdrconnector#manual-installation) process and then defining additional devices and profiles in the OWRX settings. The same sample rate is used for all receivers, so starting a profile with a different sample rate will affect other running devices. To avoid problems, it may be best to use a single sample rate for all profiles.
+The version of the connector installed with OpenWebRX 1.0 and 1.1 only supports a single receiver. The current version supports multiple receivers, up to the number the hardware is capable of, e.g. 4 for a Hermes-Lite 2 with standard gateware. Until this version is packaged in an OpenWebRX release, you can experiment with it by using the OpenWebRX experimental repositories or by following the [manual installation](https://github.com/26uk247/hpsdrconnector#manual-installation) process and then defining additional devices and profiles in the OWRX settings. The same sample rate is used for all receivers, so starting a profile with a different sample rate will affect other running devices. To avoid problems, it may be best to use a single sample rate for all profiles.
 
 ## Limitations
 * Only the original HPSDR Protocol 1 is supported.
-* So far, this has been tested with the [Hermes-Lite 2](https://github.com/softerhardware/Hermes-Lite2/wiki) and the [Red Pitaya](https://www.redpitaya.com/Catalog/p25/stemlab-125-14-sdr-kit?cat=a102). Feel free to create [issues](https://github.com/jancona/hpsdrconnector/issues) with reports of success or failure using other hardware.
+* So far, this has been tested with the [Hermes-Lite 2](https://github.com/softerhardware/Hermes-Lite2/wiki) and the [Red Pitaya](https://www.redpitaya.com/Catalog/p25/stemlab-125-14-sdr-kit?cat=a102). 
 
-## Manual Installation
-
-There are now released binaries, so you no longer have to install Go to build from source. (If you wish to build from source see [Building](https://github.com/jancona/hpsdrconnector#building) below.)
-
-1. Download the proper binary for your OS and architecture from the list below.
-2. Rename the binary to `hpsdrconnector` and make it executable (`chmod +x hpsdrconnector`).
-3. Place the it in a directory in your `PATH` (e.g. `/usr/local/bin`).
-4. Test your installation by running `hpsdrconnector -h`. You should see a usage message.
-
-| Operating System | Executable Name |
-| ---------------- | --------------- |
-| Desktop Linux | [hpsdrconnector_linux_amd64](https://github.com/jancona/hpsdrconnector/releases/latest/download/hpsdrconnector_linux_amd64) |
-| Raspberry Pi (and other Arm) Linux | [hpsdrconnector_linux_arm](https://github.com/jancona/hpsdrconnector/releases/latest/download/hpsdrconnector_linux_arm) |
-| MacOS amd64 | [hpsdrconnector_macos_amd64](https://github.com/jancona/hpsdrconnector/releases/latest/download/hpsdrconnector_macos_amd64) |
 
 ## Developer Information
 

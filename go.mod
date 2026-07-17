@@ -1,8 +1,8 @@
-module github.com/jancona/hpsdrconnector
+module github.com/26uk247/hpsdrconnector
 
 go 1.13
 
 require (
 	github.com/hashicorp/logutils v1.0.0
-	github.com/jancona/hpsdr v0.12.0
+	github.com/26uk247/hpsdr v0.12.0
 )

@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main // "github.com/jancona/hpsdrconnector"
+package main // "github.com/26uk247/hpsdrconnector"
 
 import (
 	"bufio"
@@ -36,8 +36,8 @@ import (
 	"time"
 
 	"github.com/hashicorp/logutils"
-	"github.com/jancona/hpsdr"
-	"github.com/jancona/hpsdr/protocol1"
+	"github.com/26uk247/hpsdr"
+	"github.com/26uk247/hpsdr/protocol1"
 )
 
 var (
