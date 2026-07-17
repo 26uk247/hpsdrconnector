@@ -47,7 +47,7 @@ var (
 	lnaGainArg     *uint   = flag.Uint("gain", 20, "LNA gain between 0 (-12dB) and 60 (48dB)")
 	controlPortArg *uint   = flag.Uint("control", 4591, "control socket port (default 4591)")
 	radioIPArg     *string = flag.String("radio", "", "IP address of radio (default use first radio discovered)")
-	isDebugArg     *bool   = flag.Bool("debug", false, "Emit debug log messages on stdout")
+	isDebugArg     *bool   = flag.Bool("debug", false, "Emit debug log massages on stdout")
 	isServerArg    *bool   = flag.Bool("server", false, "Run as the server process")
 	serverPortArg  *uint   = flag.Uint("serverPort", 7300, "Server port for this radio")
 	serverLogArg   *string = flag.String("serverLog", "", "Device/file for server log (default stdout)")
@@ -60,7 +60,7 @@ func init() {
 	flag.UintVar(lnaGainArg, "g", 20, "LNA gain between 0 (-12dB) and 60 (48dB)")
 	flag.UintVar(controlPortArg, "c", 4591, "control socket port (default 4591)")
 	flag.StringVar(radioIPArg, "r", "", "IP address of radio (default use first radio discovered)")
-	flag.BoolVar(isDebugArg, "d", false, "Emit debug log messages on stdout")
+	flag.BoolVar(isDebugArg, "d", false, "Emit debug log massages on stdout")
 }
 
 func main() {
